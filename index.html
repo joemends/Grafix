@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joe | Designer</title> 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hover-scale:hover {
+      transform: scale(1.03);
+      transition: 0.3s ease-in-out;
+    }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #60a5fa;
+      border-radius: 4px;
+    }
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 100vh;
+      z-index: 50;
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      background: white;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    #sidebar a {
+      color: gray;
+      transition: color 0.3s ease;
+    }
+    #sidebar a:hover {
+      color: #4C89FF;
+    }
+    #menu-btn {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+    }
+    .green {
+      color: #bda400;
+    }
+    @media (max-width: 600px) {
+      #sidebar {
+        transform: translateX(-100%);
+      }
+      #sidebar.open {
+        transform: translateX(0);
+      }
+      #menu-btn {
+        display: block;
+      }
+      nav ul {
+        display: none;
+      }
+    }
+    @media (min-width: 610px) {
+      #menu-btn {
+        display: none;
+      }
+      #sidebar {
+        display: none;
+      }
+      nav ul {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Dark Mode Toggle Button -->
+  <button id="themeToggle" class="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md">
+    <i class="ph ph-moon text-xl" id="themeIcon"></i>
+  </button>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="md:hidden flex-col items-center bg-white dark:bg-gray-800 shadow fixed top-0 left-0 w-16 h-full pt-8 z-50">
+    <a href="#about" title="About"><i class="ph ph-user text-2xl"></i></a>
+    <a href="#projects" title="Projects"><i class="ph ph-folders text-2xl"></i></a>
+    <a href="#contact" title="Contact"><i class="ph ph-phone text-2xl"></i></a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="w-full fixed top-0 z-40 bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-blue-700 dark:text-yellow-300">Incredible<span class="green">Grafix</span></h1>
+      <ul class="hidden md:flex space-x-6 text-sm text-gray-600 dark:text-gray-300 font-medium">
+        <li><a href="#about" class="hover:text-blue-600 dark:hover:text-yellow-400 transition">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-yellow-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="block md:hidden">
+        <i class="ph ph-list text-3xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-32 pb-24 text-center bg-gradient-to-br from-blue-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-5xl font-bold text-gray-900 dark:text-white leading-tight">Hey, I'm Jehoshaphat Mends 💪</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 mt-5"> Graphic Designer crafting clean, scalable, and impactful experiences.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 bg-white dark:bg-gray-900" data-aos="fade-right">
+    <div class="max-w-6xl mx-auto px-6 grid sm:grid-cols-2 gap-14 items-center">
+      <div>
+        <h3 class="text-3xl font-semibold text-blue-600 dark:text-yellow-400 mb-6">About Me</h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+          I'm a designer with 2+ years of experience creating impactful visuals. My work blends functionality and aesthetics, using my computer and softwares like Adobe Photoshop, Adobe Illustrator etc.
+        </p>
+        <p class="mt-5 text-gray-600 dark:text-gray-400 text-md">I thrive on transforming ideas into intuitive, user-centric digital experiences.</p>
+      </div>
+      <img src="profile.jpg" alt="Alex profile" class="rounded-xl shadow-md w-full object-cover" />
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+<section id="projects" class="py-24 bg-gray-50 dark:bg-gray-800" data-aos="fade-up">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-semibold text-blue-600 dark:text-yellow-400 text-center mb-14">Highlighted Projects</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Project One -->
+      <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
+        <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Brand Identity Design</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Crafted a cohesive brand identity for a local startup, including logo, typography, and color scheme.</p>
+          <div class="mt-4">
+            <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two -->
+      <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
+        <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Social Media Campaign</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Developed a visual campaign for a product launch, resulting in a 40% increase in engagement.</p>
+          <div class="mt-4">
+            <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Three -->
+      <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
+        <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Web Design Concept</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Designed a responsive and visually appealing website layout for a fictional brand concept.</p>
+          <div class="mt-4">
+            <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project 4 -->
+<div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
+  <img src="project4.jpg" alt="Project 3" class="w-full h-48 object-cover" />
+  <div class="p-6">
+    <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Web Design Concept</h4>
+    <p class="text-gray-700 dark:text-gray-300 mt-3">Designed a responsive and visually appealing website layout for a fictional brand concept.</p>
+    <div class="mt-4">
+      <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-white dark:bg-gray-900" data-aos="fade-left">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold text-blue-600 dark:text-yellow-400 mb-6">Let’s Collaborate</h3>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">Whether it’s a new project, a collaboration, or just a chat — I’d love to hear from you.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-5">
+        <a href="mailto:joemends217@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">Email Me</a>
+        <a href="tel:+233249876613" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">Call Me</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center text-sm text-gray-500 dark:text-gray-400 py-6 border-t dark:border-gray-700 mt-10">
+    &copy; <span id="year"></span> Alex — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    AOS.init({ duration: 1000 });
+
+    const menuBtn = document.getElementById('menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    menuBtn.addEventListener('click', () => sidebar.classList.toggle('open'));
+    window.addEventListener('click', (e) => {
+      if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+        sidebar.classList.remove('open');
+      }
+    });
+
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeModal = document.getElementById('closeModal');
+    document.querySelectorAll('.view-project').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const img = link.closest('.bg-white, .dark\\:bg-gray-700').querySelector('img');
+        modalImg.src = img.src;
+        modal.classList.remove('hidden');
+      });
+    });
+    closeModal?.addEventListener('click', () => modal.classList.add('hidden'));
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.add('hidden');
+    });
+
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlEl = document.documentElement;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      htmlEl.classList.add('dark');
+      themeIcon.classList.replace('ph-moon', 'ph-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      const isDark = htmlEl.classList.contains('dark');
+      themeIcon.classList.toggle('ph-moon', !isDark);
+      themeIcon.classList.toggle('ph-sun', isDark);
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
