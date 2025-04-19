@@ -71,7 +71,7 @@
     .green {
       color: #bda400;
     }
-    @media (max-width: 800px) {
+    @media (max-width: 600px) {
       #sidebar {
         transform: translateX(-100%);
       }
@@ -85,7 +85,7 @@
         display: none;
       }
     }
-    @media (min-width: 810px) {
+    @media (min-width: 610px) {
       #menu-btn {
         display: none;
       }
@@ -98,7 +98,7 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden">
   <!-- Dark Mode Toggle Button -->
   <button id="themeToggle" class="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 shadow-md">
     <i class="ph ph-moon text-xl" id="themeIcon"></i>
@@ -157,8 +157,8 @@
       <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
         <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover" />
         <div class="p-6">
-          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Brand Identity Design</h4>
-          <p class="text-gray-700 dark:text-gray-300 mt-3">Crafted a cohesive brand identity for a local startup, including logo, typography, and color scheme.</p>
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Billboard</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Crafted a cohesive billboard design for a local startup, including logo, typography, and color scheme.</p>
           <div class="mt-4">
             <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
           </div>
@@ -169,8 +169,8 @@
       <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
         <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover" />
         <div class="p-6">
-          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Social Media Campaign</h4>
-          <p class="text-gray-700 dark:text-gray-300 mt-3">Developed a visual campaign for a product launch, resulting in a 40% increase in engagement.</p>
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Social Media Advertisment</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Developed a visual campaign for an advertisment, resulting in a 40% increase in production.</p>
           <div class="mt-4">
             <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
           </div>
@@ -181,8 +181,20 @@
       <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
         <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover" />
         <div class="p-6">
-          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Web Design Concept</h4>
-          <p class="text-gray-700 dark:text-gray-300 mt-3">Designed a responsive and visually appealing website layout for a fictional brand concept.</p>
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Social Media Advertisment</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Designed a visual campaign for an advertisment, Populating more sale</p>
+          <div class="mt-4">
+            <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
+          </div>
+        </div>
+      </div>
+
+          <!-- Project 4 -->
+      <div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
+        <img src="209.png" alt="Project 4" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Logo Design Concept</h4>
+          <p class="text-gray-700 dark:text-gray-300 mt-3">Designed to convay stability.</p>
           <div class="mt-4">
             <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
           </div>
@@ -192,20 +204,13 @@
   </div>
 </section>
 
-<!-- Project 4 -->
-<div class="bg-white dark:bg-gray-700 shadow-lg rounded-lg overflow-hidden hover-scale transition-all">
-  <img src="project4.jpg" alt="Project 3" class="w-full h-48 object-cover" />
-  <div class="p-6">
-    <h4 class="text-xl font-semibold text-blue-600 dark:text-yellow-300">Web Design Concept</h4>
-    <p class="text-gray-700 dark:text-gray-300 mt-3">Designed a responsive and visually appealing website layout for a fictional brand concept.</p>
-    <div class="mt-4">
-      <a href="#" class="view-project text-blue-600 dark:text-yellow-400 hover:underline font-medium">View Project</a>
-    </div>
-  </div>
+
+
+<!-- Image Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <img id="modalImg" class="max-w-3xl w-full max-h-[90vh] rounded shadow-lg border-4 border-white dark:border-gray-800" alt="Enlarged Project Image" />
+  <button id="closeModal" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
 </div>
-</div>
-</div>
-</section>
 
 
 
