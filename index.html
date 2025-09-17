@@ -4,19 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joe | Designer</title> 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {}
-      }
-    }
-  </script>
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -267,6 +259,18 @@
     &copy; <span id="year"></span> IncredibleGrafix — All rights reserved.
   </footer>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     AOS.init({ duration: 1000 });
@@ -320,3 +324,4 @@ document.body.style.overflowX = 'hidden';
   </script>
 </body>
 </html>
+
